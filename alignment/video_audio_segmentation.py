@@ -11,9 +11,10 @@ from moviepy.editor import VideoFileClip
 
 def video_audio_segmentation(path):
     for file in os.listdir('videos'):
-        video_n = file[5]
-        if file[6] != '.':
-            video_n = str(video_n) + str(file[6])
+        video_ns = [s for s in file if s.isdigit()]
+        video_n = ''
+        for value in video_ns:
+            video_n += value
         try:
             timestamps = np.load(path + r'\coordinates_and_timestamps\video{c}_timestamp.npy'.format(c=video_n))
             do_segments(path, video_n, timestamps)
