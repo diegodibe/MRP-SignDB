@@ -9,7 +9,7 @@ The URL could be different of the default one. The videos are stored in a new fo
 The audio module is relevant when the subtitles are not provided.
 In the folder Audio_to_text it is necessary to add the LIUM jar 'LIUM_SpkDiarization-8.4.1', it is possible to dowload it from https://projets-lium.univ-lemans.fr/spkdiarization/download/, in order to create the segments of the audio. Successively use DeepSpeech to translate the segments into text, you can find in the folder the file deepspeech.ipynb.
 
-In the alignment module is necessary to store the results of OpenPose(openpose.ipynb) in a folder called coordinates_and_timestamps. SUccessively, the files regarding each video will be processed to create aligned segments.
+In the alignment module is necessary to store the results of OpenPose(LSE_openpose.ipynb) in a folder called coordinates_and_timestamps. SUccessively, the files regarding each video will be processed to create aligned segments.
 
 The embedding part is still to be completed, the embeddings are created and stored in the alignment folder, then use them as a parameter to vecmap to cross-lingual alignment https://github.com/artetxem/vecmap.
  
