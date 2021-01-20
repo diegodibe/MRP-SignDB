@@ -2,6 +2,8 @@
 Script to download, segment and align sign language videos
 it is possible to run the modules separately through console input.
 
+The scripts interacts with many files, we observed that some machines get an error because of the encoding during reading\writing files. Also be careful in istall the right packages.  
+
 The URL could be different of the default one. The videos are stored in a new folder called MRP-SignDB\videos, the subtitles files in MRP-SignDB\audio_to_text\subtitles. It is also possible to manually add new files in the respective folders without running the entire module. Alternativally, to ensure the succesive modules to run correcly manually add MRP-SignDB\videos and MRP-SignDB\audio_to_text\subtitles containg the files.
 
 The audio module is relevant when the subtitles are not provided.
