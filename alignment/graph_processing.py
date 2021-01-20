@@ -89,7 +89,7 @@ def graph_processing(path):
                 graph.add_edge(4 + n_nodes, 25 + n_nodes)
                 graph.add_edge(7 + n_nodes, 46 + n_nodes)
                 if multiplier > 0:
-                    graph.add_edge(n_nodes - len(coordinates[0]),  n_nodes)
+                    graph.add_edge([(n_nodes - len(coordinates[0]),  n_nodes, {'order': multiplier})])
                 multiplier += 1
                 #print(nx.is_connected(graph))
 
