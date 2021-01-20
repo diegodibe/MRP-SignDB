@@ -191,7 +191,7 @@ def do_subtitles_segments(path, video_n, segment, start, end):
     alignedsub = alignedsub.replace("\\N", " ")
     alignedsub = alignedsub[1:]
     print(alignedsub)
-    with open(get_path(video_n, r'\{p}\subtitle_segments'.format(p=path), 'video{}subtitle' + segment + '.txt'),
+    with open(get_path(video_n, r'\{p}\subtitle_segments'.format(p=path), 'video{}_subtitle_' + segment + '.txt'),
               'w') as f:
         f.write(alignedsub)
 
