@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 import tensorflow_hub as hub
+import tensorflow_text
 
 
 def embeddings(path):
