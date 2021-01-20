@@ -43,14 +43,17 @@ def do_segments(path, video_n, timestamps):
 
 
 def do_video_segments(path, video_n, segment, start, end):
-    (
-        ffmpeg
-        .input('videos/video{}.ts'.format(video_n))
-        .trim(start=start, end=end)
-        .setpts('PTS-STARTPTS')
-        .output(get_path(video_n, r'\{p}\video_segments'.format(p=path), 'video{}_' + segment + '.mp4'))
-        .run()
-    )
+    try:
+        (
+            ffmpeg
+            .input('videos/video{}.ts'.format(video_n))
+            .trim(start=start, end=end)
+            .setpts('PTS-STARTPTS')
+            .output(get_path(video_n, r'\{p}\video_segments'.format(p=path), 'video{}_' + segment + '.mp4'))
+            .run()
+        )
+    except ffmpeg._run.Error:
+        print('exit')
 
 
 def get_frame_rate(path, video_n):
